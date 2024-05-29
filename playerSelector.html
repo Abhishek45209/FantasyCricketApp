@@ -1,0 +1,69 @@
+<template>
+<lightning-card title="Select Players">
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4"> 
+            <h2>Wicket Keepers:</h2>
+            <template if:true={wicketKeepers}>
+                <template for:each={wicketKeepers} for:item="player">
+                    <div key={player.Id}>
+                        <lightning-input
+                            type="checkbox"
+                            label={player.Name}
+                            value={player.Id}
+                            onchange={handleChange}>
+                        </lightning-input>
+                    </div>
+                </template>
+            </template>
+        </div>
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4"> 
+            <h2>Batsmen:</h2>
+            <template if:true={batsmen}>
+                <template for:each={batsmen} for:item="player">
+                    <div key={player.Id}>
+                        <lightning-input
+                            type="checkbox"
+                            label={player.Name}
+                            value={player.Id}
+                            onchange={handleChange}>
+                        </lightning-input>
+                    </div>
+                </template>
+            </template>
+        </div>
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4"> 
+            <h2>All Rounders:</h2>
+            <template if:true={allRounders}>
+                <template for:each={allRounders} for:item="player">
+                    <div key={player.Id}>
+                        <lightning-input
+                            type="checkbox"
+                            label={player.Name}
+                            value={player.Id}
+                            onchange={handleChange}>
+                        </lightning-input>
+                    </div>
+                </template>
+            </template>
+        </div>
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4"> 
+            <h2>Bowlers:</h2>
+<template if:true={bowlers}>
+    <template for:each={bowlers} for:item="player">
+        <div key={player.Id}>
+            <lightning-input
+                type="checkbox"
+                label={player.Name}
+                value={player.Id}
+                onchange={handleChange}>
+            </lightning-input>
+        </div>
+    </template>
+</template>
+</div>
+<!-- End of the Bowlers column -->
+</div>
+<!-- End of the slds-grid slds-wrap -->
+   </lightning-card>
+</template>
+        
